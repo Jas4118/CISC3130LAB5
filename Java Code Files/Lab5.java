@@ -1,5 +1,7 @@
 package cisc3130Lab5;
-
+//Jason Li 
+//CISC3130 TY9 Katherine Chuang
+//Due November 8th 2020
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
