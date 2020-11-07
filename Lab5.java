@@ -1,5 +1,7 @@
 package cisc3130Lab5;
-
+//Jason Li CISC3130
+//Lab 5 Katherine Chuang TY9
+//Due November 8th 2020 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,10 +38,10 @@ public class Lab5 {
         if (root == null) {
             return; 
         }
-        printTree(root.getLeft(), outFile);   //Prints left nodes until there's no more
-        outFile.println(root.getSongTitle()+ " ,Stream Count: " +root.getStreamCount());
-        printTree(root.getRight(), outFile); //Prints right nodes until there's no more
-    } 
+        	printTree(root.getLeft(), outFile);   //Prints left nodes until there's no more
+        	outFile.println(root.getSongTitle()+ " ,Stream Count: " +root.getStreamCount());
+       		printTree(root.getRight(), outFile); //Prints right nodes until there's no more
+    	} 
 	
 	public static void main(String[]args) throws IOException {
 		FileReader fr = new FileReader("regional-global-daily-latest.csv"); //Have to use BufferedReader because it stopped reading when I used Scanner
@@ -68,7 +70,7 @@ public class Lab5 {
         	}
         	
         	String artist = temp2.replaceAll("^\"+|\"+$", "");//Sets artist name
-        	String temp3=line.split(",")[3];
+        	String temp3=line.split(",")[3]; // Third split is the stream amount
         	int length = temp3.length();
         	for (int i = 0; i < length; i++) { // loops to check if letters are in the split if not it becomes next part for parsing
                 if ((Character.isLetter(temp3.charAt(i)) == true)) {
@@ -85,7 +87,7 @@ public class Lab5 {
         	if(root == null) { // My insert method didn't work because of pass by value so I placed it in the main method
     			root = song;		
     		}
-        	else if(song.getSongTitle().compareTo(root.getSongTitle())<=0 )
+        	else if(song.getSongTitle().compareTo(root.getSongTitle())<=0 ) // Comparison between node titles and checks if they get set left or right.
     			root.setLeft(insert(root.getLeft(),song));
     		else if (song.getSongTitle().compareTo(root.getSongTitle())>0)
     			root.setRight(insert(root.getRight(),song));
