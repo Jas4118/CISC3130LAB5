@@ -45,14 +45,14 @@ public class Lab5 {
 	
 	public static void main(String[]args) throws IOException {
 		FileReader fr = new FileReader("regional-global-daily-latest.csv"); //Have to use BufferedReader because it stopped reading when I used Scanner
-        BufferedReader br = new BufferedReader(fr);
-        File topSongs= new File(("TopStreamingArtists.txt")); //Creating top song list and the subset list
-        File subsets= new File(("subsets.txt")); 
-        PrintWriter topSongList = new PrintWriter(topSongs);
-        PrintWriter subSetList = new PrintWriter(subsets);
-        br.readLine();
-        br.readLine();
-        Song root=null;
+        	BufferedReader br = new BufferedReader(fr);
+        	File topSongs= new File(("TopStreamingArtists.txt")); //Creating top song list and the subset list
+        	File subsets= new File(("subsets.txt")); 
+        	PrintWriter topSongList = new PrintWriter(topSongs);
+        	PrintWriter subSetList = new PrintWriter(subsets);
+        	br.readLine();
+        	br.readLine();
+        	Song root=null;
         
         for (String line = br.readLine(); line != null; line = br.readLine()) {
         	String temp = line.split(",")[1];// Song name is the first split on comma
