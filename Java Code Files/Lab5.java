@@ -38,10 +38,10 @@ public class Lab5 {
         if (root == null) {
             return; 
         }
-        printTree(root.getLeft(), outFile);   //Prints left nodes until there's no more
-        outFile.println(root.getSongTitle()+ " ,Stream Count: " +root.getStreamCount());
-        printTree(root.getRight(), outFile); //Prints right nodes until there's no more
-    } 
+        	printTree(root.getLeft(), outFile);   //Prints left nodes until there's no more
+        	outFile.println(root.getSongTitle()+ " ,Stream Count: " +root.getStreamCount());
+        	printTree(root.getRight(), outFile); //Prints right nodes until there's no more
+   	} 
 	
 	public static void main(String[]args) throws IOException {
 		FileReader fr = new FileReader("regional-global-daily-latest.csv"); //Have to use BufferedReader because it stopped reading when I used Scanner
